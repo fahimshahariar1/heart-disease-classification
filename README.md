@@ -9,3 +9,5 @@ We are going to take the following approach
 4. Features
 5. Modelling
 6. Experimentation
+
+## 1. Problem Definition: In a statement, Given clinical parameters about a patient, can we predict whether or not they have heart disease?
