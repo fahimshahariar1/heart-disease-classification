@@ -10,7 +10,11 @@ We are going to take the following approach
 5. Modelling
 6. Experimentation
 
-## 1. Problem Definition: In a statement, Given clinical parameters about a patient, can we predict whether or not they have heart disease?
+## 1. Problem Definition: 
+In a statement, Given clinical parameters about a patient, can we predict whether or not they have heart disease?
 
 ## 2. Data: 
 This data set dates from 1988 and consists of four databases: Cleveland, Hungary, Switzerland, and Long Beach V. It contains 76 attributes, including the predicted attribute, but all published experiments refer to using a subset of 14 of them. The "target" field refers to the presence of heart disease in the patient. It is integer valued 0 = no disease and 1 = disease.
+
+## 3. Evaluation:
+If we can reach 95% accuracy at predicting whether or not a patient has heart disease during the proof of concept , we will pursue the project
