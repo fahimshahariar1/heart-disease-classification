@@ -39,3 +39,10 @@ If we can reach 95% accuracy in predicting whether or not a patient has heart di
 ### Load Data
 Now we will load the data from the resources using df = pd.read_csv("heart-disease.csv")
 
+### Data Exploration (Exploratory Data Analysis or EDA): 
+The goal here is to find our more about the data and become a subject matter expert on the data set that we are working with
+
+During exploration, we check if we have any missing values or not. what type of values we have for the target variable etc. to get familiarity about the data
+df["target"].value_counts()
+df["target"].value_counts().plot(kind = "bar", color=["salmon", 'lightblue']);
+df.isna().sum()
