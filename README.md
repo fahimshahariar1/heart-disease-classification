@@ -41,11 +41,17 @@ Now we will load the data from the resources using df = pd.read_csv("heart-disea
 
 ### Data Exploration (Exploratory Data Analysis or EDA): 
 The goal here is to find our more about the data and become a subject matter expert on the data set that we are working with
-
-### Heart Disease frequency based on sex
-df.sex.value_counts()
-
 During exploration, we check if we have any missing values or not. what type of values we have for the target variable etc. to get familiarity about the data
 df["target"].value_counts()
 df["target"].value_counts().plot(kind = "bar", color=["salmon", 'lightblue']);
 df.isna().sum()
+
+### Heart Disease frequency based on sex
+df.sex.value_counts()
+we can compare it to crosstab using a bar plot
+pd.crosstab(df.target, df.sex).plot(kind = "bar", color=["salmon", "lightblue"])
+plt.title("Heart Disease based on sex")
+plt.xlabel("0 = No, 1 = Yes")
+plt.ylabel("Amount")
+plt.legend(["Female", "Male"])
+plt.xticks(rotation= 0);
