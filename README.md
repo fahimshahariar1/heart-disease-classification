@@ -73,3 +73,10 @@ plt.title("Heart Disease in function of Age and Maximum heart rate")
 plt.xlabel("Age")
 plt.ylabel("Max Heart Rate")
 plt.legend(["Disease", 'No Disease']);
+
+### Heart Disease frequency based on chest pain type
+cp: chest pain type
+        -- Value 1: typical angina
+        -- Value 2: atypical angina
+        -- Value 3: non-anginal pain
+        -- Value 4: asymptomatic
