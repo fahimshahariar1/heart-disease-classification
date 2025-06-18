@@ -59,3 +59,17 @@ plt.xticks(rotation= 0);
 As we are proceeding with the dataset. Our first goal would be to find out patterns inside our dataset that will help us use different algorithms to reach our target
 
 ### Age vs Max heart rate for heart Disease
+plt.figure(figsize =(10,6))
+
+plt.scatter(df.age[df.target == 1],
+           df.thalach[df.target == 1],
+           c = "salmon")
+
+plt.scatter(df.age[df.target == 0],
+           df.thalach[df.target == 0],
+           c= "blue")
+
+plt.title("Heart Disease in function of Age and Maximum heart rate")
+plt.xlabel("Age")
+plt.ylabel("Max Heart Rate")
+plt.legend(["Disease", 'No Disease']);
