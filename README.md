@@ -80,3 +80,9 @@ cp: chest pain type
         -- Value 2: atypical angina
         -- Value 3: non-anginal pain
         -- Value 4: asymptomatic
+
+Next up we will try to find the correlation matrix of the dataset 
+#Correlation matrix using seaborn
+corr_matrix = df.corr()
+fig, ax = plt.subplots(figsize=(15,10))
+ax = sns.heatmap(corr_matrix, annot = True, linewidths=0.5, fmt='.2f', cmap='YlGnBu')
