@@ -102,3 +102,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 No we have our data split into training and test sets. It's time to build a machine learning model.
 We will train it find the patterns on the training set
 then we will test it use the patterns on test set
+
+We are going to use 3 models to do the prediction
+1. Logistic Regression
+2. K-nearest Neighbour
+3. Random Forest Clasifier
