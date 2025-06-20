@@ -110,5 +110,33 @@ We are going to use 3 models to do the prediction
 
 Again, we find all these models by using the sklearn model map that you can find here https://scikit-learn.org/stable/machine_learning_map.html
 But why are we using logistic regression if this is a classification problem? Well, that's the interesting part.
-If you search for logistic regression, you will find in the documentation it says "Despite its name, it is implemented as a linear model for classification rather than regression in terms of the scikit-learn/ML nomenclature."
+If you search for logistic regression, you will find in the documentation that it says, "Despite its name, it is implemented as a linear model for classification rather than regression in terms of the scikit-learn/ML nomenclature."
 https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+
+So these are the 3 models that we are going to use. Now we can't just create train and test sets and try to predict it for every model. Instead, we will create a dictionary and put all the models in it, and create a function to fit and score with those models
+
+#Put models in a dictionary
+models = {"Logistic Regression" : LogisticRegression(),
+         "KNN" : KNeighborsClassifier(),
+         "Random Forest": RandomForestRegressor()}
+
+#create a function to fit and score models
+def fit_and_score(models, X_train, X_test, y_train, y_test):
+    """
+    Fits and evaluates given machine learning models.
+    models: a dict of different scikit-learn machine learning models
+    X_train: training data (no labels)
+    X_test: testing data (no labels)
+    y_train: training labels
+    y_test: testing labels
+    """
+    model_scores = {}
+    for name, model in models.items():
+        model.fit(X_train, y_train)
+        model_scores[name] = model.score(X_test, y_test)
+    return model_scores
+model_scores = fit_and_score(models=models, X_train=X_train, X_test = X_test, y_train = y_train, y_test = y_test)
+model_scores
+
+and we will see that the logistic regression scores the highest with 88% accuracy. But we are still not close enough to our target. our target was to get 95% accuracy
+
