@@ -120,7 +120,7 @@ models = {"Logistic Regression" : LogisticRegression(),
          "KNN" : KNeighborsClassifier(),
          "Random Forest": RandomForestRegressor()}
 
-#create a function to fit and score models
+# Create a function to fit and score models
 def fit_and_score(models, X_train, X_test, y_train, y_test):
     """
     Fits and evaluates given machine learning models.
@@ -138,5 +138,17 @@ def fit_and_score(models, X_train, X_test, y_train, y_test):
 model_scores = fit_and_score(models=models, X_train=X_train, X_test = X_test, y_train = y_train, y_test = y_test)
 model_scores
 
-and we will see that the logistic regression scores the highest with 88% accuracy. But we are still not close enough to our target. our target was to get 95% accuracy
+And we will see that the logistic regression scores the highest with 88% accuracy. But we are still not close enough to our target. Our target was to get 95% accuracy
 
+Now that we have some default values, we need to do some tuning in order to get better accuracy.
+Things that we are going to look into are
+1. Hyperparameter tuning
+2. Feature importance
+3. Confusion matrix
+4. Cross-validation
+5. Precision
+6. Recall
+7. F1 Score
+8. Classification Report
+9. ROC Curve
+10. Area under curve (AUC)
