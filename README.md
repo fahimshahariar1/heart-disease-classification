@@ -107,3 +107,8 @@ We are going to use 3 models to do the prediction
 1. Logistic Regression
 2. K-nearest Neighbour
 3. Random Forest Clasifier
+
+Again, we find all these models by using the sklearn model map that you can find here https://scikit-learn.org/stable/machine_learning_map.html
+But why are we using logistic regression if this is a classification problem? Well, that's the interesting part.
+If you search for logistic regression, you will find in the documentation it says "Despite its name, it is implemented as a linear model for classification rather than regression in terms of the scikit-learn/ML nomenclature."
+https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
