@@ -88,3 +88,5 @@ fig, ax = plt.subplots(figsize=(15,10))
 ax = sns.heatmap(corr_matrix, annot = True, linewidths=0.5, fmt='.2f', cmap='YlGnBu')
 
 By this correlation matrix we are basically trying to find out patterns by which the target column is related or gets triggered. and we can find that lot of other columns can have an impact in the target column(e.g. CP, thalach etc)
+
+## 5. Model
