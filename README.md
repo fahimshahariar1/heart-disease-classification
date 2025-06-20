@@ -90,4 +90,11 @@ ax = sns.heatmap(corr_matrix, annot = True, linewidths=0.5, fmt='.2f', cmap='YlG
 By this correlation matrix we are basically trying to find out patterns by which the target column is related or gets triggered. and we can find that lot of other columns can have an impact in the target column(e.g. CP, thalach etc)
 
 ## 5. Modelling
-Now we will split the data into X and y first then preapre them for training and testing sets so that can run our model on them 
+Now we will split the data into X and y first, then prepare them for training and testing sets so that we can run our model on them.
+
+To do that we will first split the data into X & y
+X = df.drop("target", axis =1)
+y = df["target"]
+
+then p
+
