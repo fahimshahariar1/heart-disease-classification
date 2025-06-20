@@ -177,3 +177,4 @@ for i in neighbors:
     #update the test score list
     test_scores.append(knn.score(X_test, y_test))
 
+even after tuning we got the highest accuracy to be 67.21% which is very low compared to other two models. So for now we will discard this model and work with other two to get our desired accuracy
