@@ -152,3 +152,28 @@ Things that we are going to look into are
 8. Classification Report
 9. ROC Curve
 10. Area under curve (AUC)
+
+The first thing that we are going to tune is the Hyperparameter
+### Hyperparameter Tuning
+That means that we are going to tune few parameters of the algorithm to get the best possible value.
+We will first start with KNN algorithm
+#let's tune KNN
+train_scores = []
+test_scores = []
+
+#create a list of different values for n-neighbors
+neighbors = range(1,21)
+
+#setup KNN
+knn = KNeighborsClassifier()
+
+#loop through different neighbors
+for i in neighbors:
+    knn.set_params(n_neighbors = i)
+    #fit the algorithm
+    knn.fit(X_train, y_train)
+    #update the training score list
+    train_scores.append(knn.score(X_train, y_train))
+    #update the test score list
+    test_scores.append(knn.score(X_test, y_test))
+
