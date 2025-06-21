@@ -179,9 +179,28 @@ for i in neighbors:
 
 Even after tuning, we achieved the highest accuracy of 72.13%, which is very low compared to the other two models. So, for now we will discard this model and work with the other two to get our desired accuracy.
 
-That's the way it needs to be done. Tune and tweak few of the parameters of the model and try to find the best result. You might ask Where can we find those parameters? Simple, you have to search or go to the documentation to know more about those parameters
+That's the way it needs to be done. Tune and tweak a few of the model's parameters to find the best result. You might ask Where can we find those parameters? Simple, you have to search or go to the documentation to know more about those parameters
 
 ### Hyperparameter Tuning with RandomizedSearchCV
 We are going to tune
 * Logistic Regression
-* Random Forest Classfier
+* Random Forest Classifier
+
+We will create a RandomizedSearchCv to go through the tuning 
+
+log_reg_grid = {"C": np.logspace(-4, 4, 20),
+               "solver": ["liblinear"]}
+
+
+rf_grid = {"n_estimator": np.arange(10,1000, 50),
+          "max_depth": [None, 3, 5, 10],
+          "min_samples_split": np.arange(2,20,2),
+          "min_samples_lead":np.arange(1,20,2)}
+
+rs_log_reg = RandomizedSearchCV(LogisticRegression(),
+                               param_distributions=log_reg_grid,
+                               cv=5,
+                               n_iter=20,
+                               verbose=True)
+rs_log_reg.fit(X_train, y_train)
+rs_log_reg.score(X_test, y_test)
