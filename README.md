@@ -204,3 +204,15 @@ rs_log_reg = RandomizedSearchCV(LogisticRegression(),
                                verbose=True)
 rs_log_reg.fit(X_train, y_train)
 rs_log_reg.score(X_test, y_test)
+
+Similarly we will test out the RandomForestCalssifier model as well to find out the best result
+as from our tuning we found that Logistic regression have given us the highest accuracy so, we are going to tune it further using gridsearch
+log_reg_grid = {"C": np.logspace(-4, 4, 30),
+               "solver": ["liblinear"]}
+#Setup random Hyperparameter search for logisticregression
+gs_log_reg = GridSearchCV(LogisticRegression(),
+                               param_grid=log_reg_grid,
+                               cv=5,
+                               verbose=True)
+gs_log_reg.fit(X_train, y_train)
+gs_log_reg.score(X_test, y_test)
