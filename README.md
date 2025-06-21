@@ -177,4 +177,11 @@ for i in neighbors:
     #update the test score list
     test_scores.append(knn.score(X_test, y_test))
 
-even after tuning we got the highest accuracy to be 67.21% which is very low compared to other two models. So for now we will discard this model and work with other two to get our desired accuracy
+Even after tuning, we achieved the highest accuracy of 72.13%, which is very low compared to the other two models. So, for now we will discard this model and work with the other two to get our desired accuracy.
+
+That's the way it needs to be done. Tune and tweak few of the parameters of the model and try to find the best result. You might ask Where can we find those parameters? Simple, you have to search or go to the documentation to know more about those parameters
+
+### Hyperparameter Tuning with RandomizedSearchCV
+We are going to tune
+* Logistic Regression
+* Random Forest Classfier
