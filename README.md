@@ -216,3 +216,16 @@ gs_log_reg = GridSearchCV(LogisticRegression(),
                                verbose=True)
 gs_log_reg.fit(X_train, y_train)
 gs_log_reg.score(X_test, y_test)
+
+and from our gridsearch as well, Logistic Regression provides the highest accuracy
+
+Now let's move to other features that we are going to need for this model
+### Evaluating our tuned machine learning classifier, beyond accuracy
+* ROC Curve & AUC score
+* Confusion Matrix
+* Classification report
+* Precision
+* Recall
+* F1 score
+
+To display the ROC Curve we will use a module from sklearn which is RocCurveDisplay()
