@@ -228,4 +228,17 @@ Now let's move to other features that we are going to need for this model
 * Recall
 * F1 score
 
-To display the ROC Curve we will use a module from sklearn which is RocCurveDisplay()
+To display the ROC Curve, we will use a module from sklearn, which is RocCurveDisplay(), and we will get the AUC score through that as well
+For the confusion matrix, we are going to use Seaborn
+def plot_conf_mat(y_test, y_preds):
+    """Plots a nice looking confusion matrix using Seaborn's heatmap()"""
+    fig, ax = plt.subplots(figsize=(3,3))
+    ax = sns.heatmap(confusion_matrix(y_test, y_preds),
+                    annot= True,
+                    cbar=False)
+    plt.xlabel("Predicted Labels")
+    plt.ylabel("True Label")
+
+plot_conf_mat(y_test, y_preds)
+
+### Calculate evaluation matrix using cross-validation
