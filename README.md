@@ -242,3 +242,4 @@ def plot_conf_mat(y_test, y_preds):
 plot_conf_mat(y_test, y_preds)
 
 ### Calculate evaluation matrix using cross-validation
+We are going to calculate accuracy, precision, recall and f1 score of our model using cross-validation and to do so we are going to use cross_val_score()
